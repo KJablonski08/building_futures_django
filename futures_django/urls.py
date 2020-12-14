@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from futures_django.views import FacebookLogin
-from futures_django.views import GoogleLogin
+# from futures_django.views import FacebookLogin
+# from futures_django.views import GoogleLogin
+from futures_django.views import GitHubLogin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,6 +25,7 @@ urlpatterns = [
     path('', include('users.urls')),
     path('', include('futures.urls')),
     path('accounts/', include('allauth.urls')),
-    path('rest-auth/facebook/', FacebookLogin.as_view(), name='fb_login'),
-    path('rest-auth/google/', GoogleLogin.as_view(), name='google_login')
+    # path('rest-auth/facebook/', FacebookLogin.as_view(), name='fb_login'),
+    # path('rest-auth/google/', GoogleLogin.as_view(), name='google_login')
+    path('auth/github/', GitHubLogin.as_view())
 ]
