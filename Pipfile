@@ -12,8 +12,12 @@ djoser = "*"
 django-cors-headers = "*"
 whitenoise = "*"
 djangorestframework = "*"
+<<<<<<< HEAD
 django-allauth = "*"
 django-rest-auth = "*"
+=======
+pillow = "*"
+>>>>>>> deploying to heroku
 
 [dev-packages]
 
