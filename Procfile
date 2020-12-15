@@ -1,0 +1,1 @@
+web: gunicorn futures_django.wsgi
