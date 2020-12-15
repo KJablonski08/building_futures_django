@@ -24,8 +24,4 @@ urlpatterns = [
     path('api-auth', include('rest_framework.urls', namespace='rest_framework')),
     path('', include('users.urls')),
     path('', include('futures.urls')),
-    path('accounts/', include('allauth.urls')),
-    # path('rest-auth/facebook/', FacebookLogin.as_view(), name='fb_login'),
-    # path('rest-auth/google/', GoogleLogin.as_view(), name='google_login')
-    path('auth/github/', GitHubLogin.as_view())
 ]
