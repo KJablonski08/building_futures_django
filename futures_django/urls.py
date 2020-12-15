@@ -17,7 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 # from futures_django.views import FacebookLogin
 # from futures_django.views import GoogleLogin
-from futures_django.views import GitHubLogin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
