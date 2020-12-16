@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from futures_django.views import GoogleLogin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -22,4 +23,5 @@ urlpatterns = [
     path('', include('users.urls')),
     path('', include('futures.urls')),
     path('accounts/', include('allauth.urls')),
+    path('rest-auth/google/', GoogleLogin.as_view(), name='google_login'),
 ]
