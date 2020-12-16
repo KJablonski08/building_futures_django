@@ -143,12 +143,14 @@ DJOSER = {
     }
 }
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://building-futures-inc.herokuapp.com",
-    "https://building-futures-inc.herokuapp.com",
-    "http://127.0.0.1:3000"
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000",
+#     "http://building-futures-inc.herokuapp.com",
+#     "https://building-futures-inc.herokuapp.com",
+#     "http://127.0.0.1:3000"
+# ]
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
