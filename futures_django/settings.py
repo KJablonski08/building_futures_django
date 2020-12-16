@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.sites',
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
@@ -44,13 +43,7 @@ INSTALLED_APPS = [
     'djoser',
     'futures',
     'users',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.google',
 ]
-
-SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -82,14 +75,6 @@ TEMPLATES = [
     },
 ]
 
-AUTHENTICATION_BACKENDS = [
-    # Needed to login by username in Django admin, regardless of `allauth`
-    'django.contrib.auth.backends.ModelBackend',
-
-    # `allauth` specific authentication methods, such as login by e-mail
-    'allauth.account.auth_backends.AuthenticationBackend',
-]
-
 WSGI_APPLICATION = 'futures_django.wsgi.application'
 
 
@@ -99,6 +84,7 @@ WSGI_APPLICATION = 'futures_django.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(conn_max_age=600)
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -143,14 +129,11 @@ DJOSER = {
     }
 }
 
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:3000",
-#     "http://building-futures-inc.herokuapp.com",
-#     "https://building-futures-inc.herokuapp.com",
-#     "http://127.0.0.1:3000"
-# ]
-
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://building-futures-inc.herokuapp.com",
+    "http://127.0.0.1:3000"
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
