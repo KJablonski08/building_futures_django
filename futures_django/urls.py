@@ -15,12 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-# from futures_django.views import FacebookLogin
-# from futures_django.views import GoogleLogin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth', include('rest_framework.urls', namespace='rest_framework')),
     path('', include('users.urls')),
     path('', include('futures.urls')),
+    path('accounts/', include('allauth.urls')),
 ]
