@@ -18,8 +18,7 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    author = models.ForeignKey(
-        'users.User', on_delete=models.CASCADE, default=1)
+    author = models.CharField(max_length=100)
     body = models.CharField(max_length=100)
     post = models.ForeignKey(
         Post, on_delete=models.CASCADE, related_name='comments', default=1)
