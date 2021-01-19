@@ -10,8 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
-import dj_database_url
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -131,8 +131,8 @@ DJOSER = {
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "http://buildingfuturesinc.herokuapp.com/",
-    "https://buildingfuturesinc.herokuapp.com/",
+    "http://buildingfuturesinc.herokuapp.com",
+    "https://buildingfuturesinc.herokuapp.com",
     "http://127.0.0.1:3000"
 ]
 

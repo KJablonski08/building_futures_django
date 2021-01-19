@@ -10,8 +10,8 @@ class Post(models.Model):
     body = models.TextField()
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
-    image = models.ImageField(
-        upload_to='images/', default='images/default.jpg')
+    photo = models.TextField(
+        default='http://www.buildingfuturesinc.com/Building_Futures,_Inc./Trip_Photos/Pages/Masai_Mara_files/Media/AEJ_3825/AEJ_3825.jpg?disposition=download')
 
     def __str__(self):
         return self.title
